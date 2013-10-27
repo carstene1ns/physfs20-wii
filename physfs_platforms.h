@@ -25,6 +25,8 @@
 #  define PHYSFS_PLATFORM_WINDOWS
 #elif (defined OS2)
 #  define PHYSFS_PLATFORM_OS2
+#elif (defined GEKKO)
+#  define PHYSFS_PLATFORM_WII
 #elif ((defined __MACH__) && (defined __APPLE__))
 /* To check if iphone or not, we need to include this file */
 # include <TargetConditionals.h> 
