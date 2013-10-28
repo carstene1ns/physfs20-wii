@@ -1,6 +1,8 @@
 /* 7zDecode.c */
 
+#ifndef GEKKO
 #include <memory.h>
+#endif
 
 /* BEGIN PHYSFS CHANGE */
 #include <string.h>
