@@ -33,7 +33,8 @@ SOURCES		:= physfs.c physfs_byteorder.c physfs_unicode.c \
 			lzma/C/Archive/7z/7zMethodID.c \
 			lzma/C/Compress/Branch/BranchX86.c \
 			lzma/C/Compress/Branch/BranchX86_2.c \
-			lzma/C/Compress/Lzma/LzmaDecode.c
+			lzma/C/Compress/Lzma/LzmaDecode.c \
+			realpath.c
 
 INCLUDE		:= -I$(CURDIR) -I$(CURDIR)/$(BUILD) -I$(LIBOGC_INC) \
 			-I$(PORTLIBS)/include
