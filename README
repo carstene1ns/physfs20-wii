@@ -1,0 +1,42 @@
+PhysFS 2.0.3 for Nintendo Wii
+
+Installation
+------------
+
+Be sure DevkitPPC and libogc is installed and $DEVKITPRO is an exported variable.
+
+Then the usual
+
+cd /to/physfs20-wii/dir
+make -j <number of processor cores/threads> (eg. -j2)
+
+will build the library. I have not yet completed the Makefile, so you have to
+manually copy library and header file to your DevkitPro installation folder.
+
+Use
+---
+
+Include PhysFS headers in your source files, eg:
+#include "physfs.h"
+
+Add -lphysfs to your LIBS in Makefile
+
+If you need file system access, use an external library (for example libfat)
+and initalize it before trying to access any files.
+
+TODO / BUGS / Limitations
+-------------------------
+
+* Add proper Wii thread support
+* Base directory is root directory of device (sd:/, usb:/),
+  when program is loaded from external (usbgecko/net)
+* User directory is fixed to root directory as well
+* Possibly crashes if no file system access library
+  is loaded and trying to access anything
+
+Authors / Porters
+-----------------
+
+carstene1ns - 2013
+ - initial port
+ - cleanup
